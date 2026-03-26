@@ -227,6 +227,31 @@ docker compose exec backend bash
 docker compose exec frontend sh
 ```
 
+## 🌍 Deploy no GitHub Pages
+
+Este repositório já possui workflow automático em `.github/workflows/deploy-pages.yml`.
+
+### Como ativar
+
+1. No GitHub, abra **Settings → Pages** do repositório `LiberPay-LLC/website`.
+2. Em **Build and deployment**, selecione **Source: GitHub Actions**.
+3. Faça push na `main` (ou rode manualmente o workflow **Deploy Frontend to GitHub Pages**).
+
+### URL esperada
+
+- `https://liberpay-llc.github.io/website/`
+
+### Importante sobre o formulário
+
+GitHub Pages hospeda apenas frontend estático. O endpoint `/api` não existe lá por padrão.
+
+Para o formulário funcionar em produção:
+
+1. Publique o backend em um host público (ex.: Render, Railway, Fly.io, VPS).
+2. No GitHub, configure **Settings → Secrets and variables → Actions → Variables**:
+   - `VITE_API_BASE_URL=https://SEU_BACKEND_PUBLICO/api`
+3. Rode o workflow novamente para gerar o build com a URL correta da API.
+
 ## 🔒 Security
 
 - JWT-based authentication
