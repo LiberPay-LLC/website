@@ -21,6 +21,10 @@ EMAIL_PROVIDER = (os.getenv('EMAIL_PROVIDER', 'smtp') or 'smtp').strip().lower()
 RESEND_API_KEY = (os.getenv('RESEND_API_KEY') or '').strip() or None
 EMAIL_FROM = (os.getenv('EMAIL_FROM') or '').strip() or None
 TEAM_EMAIL = (os.getenv('TEAM_EMAIL') or '').strip() or None
+EMAIL_LOGO_URL = (
+    (os.getenv('EMAIL_LOGO_URL') or '').strip()
+    or 'https://liberpay.co/logo-full-name-no-background.png'
+)
 
 TEMPLATE_DIR = os.path.join(os.path.dirname(__file__), 'templates')
 env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
@@ -149,12 +153,17 @@ def send_email(subject, html_body, to_email):
             if not RESEND_API_KEY:
                 raise RuntimeError("RESEND_API_KEY is required when EMAIL_PROVIDER=resend")
 
+            resend_html_body = html_body.replace(
+                'cid:liberpay-logo',
+                EMAIL_LOGO_URL,
+            )
+
             payload = {
                 "from": EMAIL_FROM,
                 "to": [to_email],
                 "subject": subject,
-                "html": html_body,
-                "text": html_to_text(html_body),
+                "html": resend_html_body,
+                "text": html_to_text(resend_html_body),
             }
             req = urllib.request.Request(
                 "https://api.resend.com/emails",
