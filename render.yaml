@@ -15,7 +15,7 @@ services:
       - key: FLASK_DEBUG
         value: "0"
       - key: CORS_ORIGINS
-        value: https://liberpay-llc.github.io
+        value: https://liberpay.co,https://www.liberpay.co,https://liberpay-llc.github.io
       - key: SUPABASE_URL
         sync: false
       - key: SUPABASE_KEY

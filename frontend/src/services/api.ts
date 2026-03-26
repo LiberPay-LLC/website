@@ -1,6 +1,16 @@
 import axios, { AxiosInstance, AxiosResponse, AxiosError } from "axios";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "/api";
+const API_BASE_URL = (() => {
+  if (import.meta.env.VITE_API_BASE_URL) {
+    return import.meta.env.VITE_API_BASE_URL;
+  }
+
+  if (typeof window !== "undefined" && window.location.hostname.endsWith("liberpay.co")) {
+    return "https://liberpay-website-backend.onrender.com/api";
+  }
+
+  return "/api";
+})();
 
 const api: AxiosInstance = axios.create({
   baseURL: API_BASE_URL,
