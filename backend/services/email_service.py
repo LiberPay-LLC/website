@@ -12,6 +12,8 @@ SMTP_HOST = os.getenv('SMTP_HOST')
 SMTP_PORT = int(os.getenv('SMTP_PORT', 465))
 SMTP_USER = os.getenv('SMTP_USER')
 SMTP_PASSWORD = os.getenv('SMTP_PASSWORD')
+SMTP_SECURITY = os.getenv('SMTP_SECURITY', 'auto').lower()
+SMTP_TIMEOUT = int(os.getenv('SMTP_TIMEOUT', 15))
 EMAIL_FROM = os.getenv('EMAIL_FROM')
 TEAM_EMAIL = os.getenv('TEAM_EMAIL')
 
@@ -75,12 +77,46 @@ def send_email(subject, html_body, to_email):
         except Exception as e:
             print(f"[WARN] Could not attach logo: {e}")
 
-        print("Connecting to SMTP server with SSL...")
-        with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, timeout=10) as server:
-            print("Logging in...")
-            server.login(SMTP_USER, SMTP_PASSWORD)
-            print("Sending message...")
-            server.send_message(msg)
+        def send_with_ssl(port):
+            print(f"Connecting to SMTP server with SSL ({SMTP_HOST}:{port})...")
+            with smtplib.SMTP_SSL(SMTP_HOST, port, timeout=SMTP_TIMEOUT) as server:
+                print("Logging in...")
+                server.login(SMTP_USER, SMTP_PASSWORD)
+                print("Sending message...")
+                server.send_message(msg)
+
+        def send_with_starttls(port):
+            print(f"Connecting to SMTP server with STARTTLS ({SMTP_HOST}:{port})...")
+            with smtplib.SMTP(SMTP_HOST, port, timeout=SMTP_TIMEOUT) as server:
+                server.ehlo()
+                server.starttls()
+                server.ehlo()
+                print("Logging in...")
+                server.login(SMTP_USER, SMTP_PASSWORD)
+                print("Sending message...")
+                server.send_message(msg)
+
+        if SMTP_SECURITY == 'ssl':
+            send_with_ssl(SMTP_PORT)
+        elif SMTP_SECURITY == 'starttls':
+            send_with_starttls(SMTP_PORT)
+        else:
+            last_error = None
+            for strategy in (
+                lambda: send_with_ssl(SMTP_PORT),
+                lambda: send_with_starttls(587),
+                lambda: send_with_ssl(465),
+            ):
+                try:
+                    strategy()
+                    last_error = None
+                    break
+                except Exception as error:
+                    last_error = error
+                    print(f"[SMTP RETRY] Strategy failed: {error}")
+            if last_error:
+                raise last_error
+
         print(f"Email sent to {to_email}")
         return True, None
     except Exception as e:
