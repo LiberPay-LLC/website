@@ -1,0 +1,225 @@
+{
+  "pageTitle": "LiberPay - Simplify Employee Payments with Credit Cards",
+  "nav": {
+    "howItWorks": "How It Works",
+    "benefits": "Benefits",
+    "about": "About",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "title": "Paying employees shouldn't cost that much",
+    "subtitle": "No more checks, paperwork, or hidden fees - just fast, easy payroll",
+    "description": "Pay your team online in seconds, using just a card.",
+    "ctaPrimary": "How It Works",
+    "ctaSecondary": "Request Contact",
+    "badge": "Direct Pay",
+    "cardTitle": "LiberPay Card",
+    "cardSubtitle": "Your employees' salary, instantly available",
+    "cardFeature1": "Instant salary access",
+    "cardFeature2": "No bank account required",
+    "cardFeature3": "Secure digital payments",
+    "instant": "Instant",
+    "secure": "Secure"
+  },
+  "benefits": {
+    "title": "Benefits for Everyone",
+    "subtitle": "A solution that benefits both the company and employees",
+    "companyBenefits": {
+      "title": "For Companies",
+      "costReduction": {
+        "title": "COST EFFICIENCY",
+        "description": "Eliminates banking fees and bureaucratic processes"
+      },
+      "lessBureaucracy": {
+        "title": "LESS BUREAUCRACY",
+        "description": "No bank account required for employees"
+      },
+      "compliance": {
+        "title": "COMPLIANCE & SECURITY",
+        "description": "Meets financial regulations with bank-level security and 24/7 support"
+      },
+      "instantPayments": {
+        "title": "INSTANT PAYMENTS",
+        "description": "Fast and secure processing without traditional checks or deposits"
+      }
+    },
+    "employeeBenefits": {
+      "title": "For Employees",
+      "withdrawalsAndPurchases": {
+        "title": "WITHDRAWALS & PURCHASES",
+        "description": "Uses the card for online purchases, in-store transactions, and ATM withdrawals"
+      },
+      "immediateAccess": {
+        "title": "IMMEDIATE ACCESS",
+        "description": "Receives payment instantly without bank setbacks"
+      },
+      "digitalManagement": {
+        "title": "DIGITAL MANAGEMENT",
+        "description": "Tracks balance and transactions through the LiberPay app"
+      },
+      "noHiddenFees": {
+        "title": "NO HIDDEN FEES",
+        "description": "Transparent model with reduced costs"
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to Simplify Your Payroll?",
+    "subtitle": "Join thousands of small businesses already using our platform",
+    "button": "Get Started Today"
+  },
+  "footer": {
+    "company": "Company",
+    "product": "Product",
+    "support": "Support",
+    "legal": "Legal",
+    "about": "About Us",
+    "careers": "Careers",
+    "benefits": "Benefits",
+    "pricing": "Pricing",
+    "help": "Help Center",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "rights": "All rights reserved.",
+    "description": "Simplifying employee payments for small businesses worldwide with LiberPay.",
+    "social": "Follow Us",
+    "newsletter": "Stay Updated",
+    "newsletterPlaceholder": "Enter your email",
+    "newsletterButton": "Subscribe",
+    "newsletterDescription": "Get the latest updates on payroll solutions and industry insights.",
+    "download": "Download App",
+    "features": "Features",
+    "security": "Security",
+    "compliance": "Compliance",
+    "api": "API Documentation",
+    "blog": "Blog",
+    "press": "Press",
+    "partners": "Partners",
+    "status": "System Status",
+    "cookies": "Cookie Policy",
+    "accessibility": "Accessibility",
+    "tagline": "Made with ❤️ for small businesses"
+  },
+  "bibleVerses": [
+    {
+      "title": "True freedom is born from truth.",
+      "text": "Then you will know the truth, and the truth will set you free.",
+      "reference": "John 8:32"
+    },
+    {
+      "title": "God has plans of hope for you.",
+      "text": "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.",
+      "reference": "Jeremiah 29:11"
+    }
+  ],
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We're here to help your company simplify payments",
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Location",
+      "businessHours": "Business Hours",
+      "getStarted": "Let's get started",
+      "description": "Ready to simplify your payroll? Fill out the form and our team will get back to you within 24 hours.",
+      "whyChoose": "Why choose LiberPay?",
+      "benefits": {
+        "noFees": "No hidden fees or surprises",
+        "support": "24/7 customer support",
+        "security": "Bank-level security",
+        "instant": "Instant payments"
+      }
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "companyName": "Company Name",
+      "companyNamePlaceholder": "Your company name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@company.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 (XXX) XXX-XXXX",
+      "industry": "Industry",
+      "industryPlaceholder": "Select your industry",
+      "customIndustry": "Specify Industry",
+      "customIndustryPlaceholder": "Please specify your industry",
+      "employeeCount": "Number of Employees",
+      "employeeCountPlaceholder": "Select employee count",
+      "options": {
+        "industry": {
+          "retail": "Retail",
+          "restaurantFoodService": "Restaurant & Food Service",
+          "professionalServices": "Professional Services",
+          "healthcare": "Healthcare",
+          "manufacturing": "Manufacturing",
+          "construction": "Construction",
+          "technology": "Technology",
+          "education": "Education",
+          "realEstate": "Real Estate",
+          "other": "Other"
+        },
+        "employeeCount": {
+          "range1to50": "1-50 employees",
+          "range51to100": "51-100 employees",
+          "range100plus": "100+ employees"
+        }
+      },
+      "location": "Location",
+      "locationPlaceholder": "City, State - Country",
+      "submit": "Get Started",
+      "sending": "Sending...",
+      "success": "Thank you! We'll get back to you soon.",
+      "error": "Something went wrong. Please try again."
+    }
+  },
+  "about": {
+    "title": "Transform Payroll into a Smart Solution",
+    "description": "The LiberPay Salary Card is the innovative solution that simplifies payment management and brings more financial freedom to your employees. With a 100% digital, agile, and secure process, your company gains efficiency and your staff have instant access to their salary, with multiple features and exclusive benefits.",
+    "values": {
+      "title": "Our Values",
+      "innovation": {
+        "title": "Innovation",
+        "description": "Cutting-edge digital solutions"
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "Clear and honest processes"
+      },
+      "security": {
+        "title": "Security",
+        "description": "Bank-level protection"
+      },
+      "accessibility": {
+        "title": "Accessibility",
+        "description": "Available to everyone"
+      },
+      "efficiency": {
+        "title": "Efficiency",
+        "description": "Streamlined operations"
+      },
+      "customerFocus": {
+        "title": "Customer Focus",
+        "description": "Your success is our priority"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Payroll in just three simple steps",
+    "step1": {
+      "title": "Registration and Request",
+      "description": "Your company partners with <strong>LiberPay</strong>, and employees or HR can register via the <strong>app</strong>, the <strong>HR portal</strong>, or by <strong>spreadsheet</strong>.\nThe virtual card is generated <strong>automatically</strong>, and the physical card can be requested if needed."
+    },
+    "step2": {
+      "title": "Payment Management",
+      "description": "Payroll is sent via <strong>API</strong> or the <strong>LiberPay platform</strong>.\nThe total amount is transferred to an <strong>escrow account</strong> and <strong>instantly distributed</strong> to each employee."
+    },
+    "step3": {
+      "title": "Instant Deposit",
+      "description": "The salary is <strong>CREDITED</strong> directly to the card on the date set by the employer, and the employee receives a <strong>notification in the app</strong> confirming the payment."
+    }
+  }
+}

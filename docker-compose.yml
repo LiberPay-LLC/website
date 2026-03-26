@@ -1,0 +1,26 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: liberpay-backend
+    # volumes: #only for development
+    #   - /home/black-hawk/projects/liberpay/backend:/app #only for development
+    # ports: #only for development
+    #   - "10006:5000" #only for development
+    env_file:
+      - .env
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: liberpay-frontend
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    env_file:
+      - .env
+    restart: always
+    ports:
+      - "443:443"
+    depends_on:
+      - backend

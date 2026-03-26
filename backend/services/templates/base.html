@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Liberpay{% endblock %}</title>
+  <style>
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      color: #1e293b;
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+    }
+    .accent-bar {
+      height: 6px;
+      background: linear-gradient(90deg, #2563eb 0%, #6366f1 100%);
+      border-radius: 0 0 8px 8px;
+      margin-bottom: 0;
+    }
+    .container {
+      max-width: 480px;
+      margin: 32px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(30,41,59,0.10);
+      padding: 32px 24px 24px 24px;
+      border: 1px solid #e0e7ef;
+      box-sizing: border-box;
+    }
+    .logo-header {
+      text-align: center;
+      margin-bottom: 32px;
+      margin-top: 32px;
+    }
+    .brand-logo {
+      display: inline-block;
+      max-width: 180px;
+      height: auto;
+      margin: 0 auto 0 auto;
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #1e293b;
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+    h3 {
+      font-size: 1.1em;
+      color: #2563eb;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1em;
+      line-height: 1.6;
+      margin-bottom: 1em;
+    }
+    ul {
+      padding-left: 1.2em;
+      margin: 1em 0;
+    }
+    li {
+      margin-bottom: 8px;
+      font-size: 1em;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #2563eb 0%, #6366f1 100%);
+      color: #fff !important;
+      padding: 12px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 24px;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1em;
+    }
+    .footer {
+      margin-top: 32px;
+      font-size: 0.9em;
+      color: #64748b;
+      text-align: center;
+      border-top: 1px solid #e0e7ef;
+      padding-top: 16px;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 16px 4vw 16px 4vw;
+        max-width: 98vw;
+      }
+      .brand-logo {
+        max-width: 140px;
+      }
+      h2 {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+  <div class="accent-bar"></div>
+  <div class="container">
+    <div class="logo-header">
+      <img src="cid:liberpay-logo" alt="Liberpay Logo" class="brand-logo" />
+    </div>
+    {% block content %}{% endblock %}
+    <div class="footer">
+      &copy; 2025 Liberpay. All rights reserved.
+    </div>
+  </div>
+</body>
+</html> 

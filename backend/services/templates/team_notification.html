@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}New Contact Lead{% endblock %}
+{% block content %}
+  <h2>New Contact Request</h2>
+  <ul>
+    <li><strong>Name:</strong> {{ name }}</li>
+    <li><strong>Company Name:</strong> {{ company_name }}</li>
+    <li><strong>Phone:</strong> {{ phone }}</li>
+    <li><strong>Email:</strong> {{ email }}</li>
+    <li><strong>Industry:</strong> {{ industry }}</li>
+    <li><strong>Employee Count:</strong> {{ employee_count }}</li>
+    <li><strong>Location:</strong> {{ location }}</li>
+  </ul>
+{% endblock %} 

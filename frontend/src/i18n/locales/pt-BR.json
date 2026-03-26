@@ -1,0 +1,225 @@
+{
+  "pageTitle": "LiberPay - Simplifique os Pagamentos de Funcionários com Cartões de Crédito",
+  "nav": {
+    "howItWorks": "Como Funciona",
+    "benefits": "Benefícios",
+    "about": "Sobre",
+    "contact": "Contato",
+    "getStarted": "Começar"
+  },
+  "hero": {
+    "title": "Pagar funcionários não deveria custar tanto",
+    "subtitle": "Chega de cheques, papelada, ou taxas ocultas - apenas pagamentos rápidos e fáceis",
+    "description": "Pague o seu time online em segundos, usando apenas um cartão.",
+    "ctaPrimary": "Como Funciona",
+    "ctaSecondary": "Solicitar Contato",
+    "badge": "Pagamento Direto",
+    "cardTitle": "Cartão LiberPay",
+    "cardSubtitle": "O salário dos seus funcionários, disponível instantaneamente",
+    "cardFeature1": "Acesso instantâneo ao salário",
+    "cardFeature2": "Sem necessidade de conta bancária",
+    "cardFeature3": "Pagamentos digitais seguros",
+    "instant": "Rápido",
+    "secure": "Seguro"
+  },
+  "benefits": {
+    "title": "Benefícios para Todos",
+    "subtitle": "Uma solução que beneficia tanto a empresa quanto os colaboradores",
+    "companyBenefits": {
+      "title": "Para Empresas",
+      "costReduction": {
+        "title": "REDUÇÃO DE CUSTOS",
+        "description": "Elimina tarifas bancárias e processos burocráticos"
+      },
+      "lessBureaucracy": {
+        "title": "MENOS BUROCRACIA",
+        "description": "Não exige conta bancária para os colaboradores"
+      },
+      "compliance": {
+        "title": "CONFORMIDADE E SEGURANÇA",
+        "description": "Atende às regulamentações financeiras, garantindo total segurança"
+      },
+      "instantPayments": {
+        "title": "PAGAMENTOS INSTANTÂNEOS",
+        "description": "Processamento rápido e seguro, sem necessidade de cheques ou depósitos tradicionais"
+      }
+    },
+    "employeeBenefits": {
+      "title": "Para Colaboradores",
+      "withdrawalsAndPurchases": {
+        "title": "SAQUES E COMPRAS",
+        "description": "Utiliza o cartão para compras online, presenciais e saques em caixas eletrônicos"
+      },
+      "immediateAccess": {
+        "title": "ACESSO IMEDIATO AO SALÁRIO",
+        "description": "Recebe o pagamento instantaneamente sem dependência de bancos"
+      },
+      "digitalManagement": {
+        "title": "GESTÃO DIGITAL",
+        "description": "Acompanha o saldo e transações pelo app LiberPay"
+      },
+      "noHiddenFees": {
+        "title": "SEM TAXAS ABUSIVAS",
+        "description": "Modelo transparente, com custos reduzidos"
+      }
+    }
+  },
+  "cta": {
+    "title": "Pronto para Simplificar sua Folha de Pagamento?",
+    "subtitle": "Junte-se a milhares de pequenas empresas que já usam nossa plataforma",
+    "button": "Comece Hoje"
+  },
+  "footer": {
+    "company": "Empresa",
+    "product": "Produto",
+    "support": "Suporte",
+    "legal": "Legal",
+    "about": "Sobre Nós",
+    "careers": "Carreiras",
+    "benefits": "Benefícios",
+    "pricing": "Preços",
+    "help": "Central de Ajuda",
+    "contact": "Contato",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "rights": "Todos os direitos reservados.",
+    "description": "Simplificando pagamentos de funcionários para pequenas empresas em todo o mundo com LiberPay.",
+    "social": "Siga-nos",
+    "newsletter": "Mantenha-se Atualizado",
+    "newsletterPlaceholder": "Digite seu email",
+    "newsletterButton": "Inscrever",
+    "newsletterDescription": "Receba as últimas atualizações sobre soluções de folha de pagamento e insights do setor.",
+    "download": "Baixar App",
+    "features": "Recursos",
+    "security": "Segurança",
+    "compliance": "Conformidade",
+    "api": "Documentação API",
+    "blog": "Blog",
+    "press": "Imprensa",
+    "partners": "Parceiros",
+    "status": "Status do Sistema",
+    "cookies": "Política de Cookies",
+    "accessibility": "Acessibilidade",
+    "tagline": "Feito com ❤️ para pequenas empresas"
+  },
+  "bibleVerses": [  
+    {
+      "title": "A verdadeira liberdade nasce da verdade.",
+      "text": "E conhecereis a verdade, e a verdade vos libertará.",
+      "reference": "João 8:32"
+    },
+    {
+      "title": "Deus tem planos de esperança para você.",
+      "text": "Porque eu bem sei os planos que tenho para vós, diz o Senhor; planos de paz e não de mal, para vos dar um futuro e uma esperança.",
+      "reference": "Jeremias 29:11"
+    } 
+  ],
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Estamos aqui para ajudar sua empresa a simplificar os pagamentos",
+    "info": {
+      "title": "Informações de Contato",
+      "email": "Email",
+      "phone": "Telefone",
+      "address": "Localização",
+      "businessHours": "Horário Comercial",
+      "getStarted": "Vamos começar",
+      "description": "Pronto para simplificar sua folha de pagamento? Preencha o formulário e nossa equipe entrará em contato em até 24 horas.",
+      "whyChoose": "Por que escolher a LiberPay?",
+      "benefits": {
+        "noFees": "Sem taxas ocultas ou surpresas",
+        "support": "Suporte 24/7",
+        "security": "Segurança bancária",
+        "instant": "Pagamentos instantâneos"
+      }
+    },
+    "form": {
+      "name": "Nome",
+      "namePlaceholder": "Seu nome completo",
+      "companyName": "Nome da Empresa",
+      "companyNamePlaceholder": "Nome da sua empresa",
+      "email": "Email",
+      "emailPlaceholder": "seu.email@empresa.com",
+      "phone": "Telefone",
+      "phonePlaceholder": "+55 (11) 99999-9999",
+      "industry": "Setor",
+      "industryPlaceholder": "Selecione",
+      "customIndustry": "Especificar Setor",
+      "customIndustryPlaceholder": "Por favor, especifique seu setor",
+      "employeeCount": "Número de Funcionários",
+      "employeeCountPlaceholder": "Selecione",
+      "options": {
+        "industry": {
+          "retail": "Varejo",
+          "restaurantFoodService": "Restaurante e Alimentação",
+          "professionalServices": "Serviços Profissionais",
+          "healthcare": "Saúde",
+          "manufacturing": "Indústria",
+          "construction": "Construção",
+          "technology": "Tecnologia",
+          "education": "Educação",
+          "realEstate": "Mercado Imobiliário",
+          "other": "Outro"
+        },
+        "employeeCount": {
+          "range1to50": "1-50 funcionários",
+          "range51to100": "51-100 funcionários",
+          "range100plus": "100+ funcionários"
+        }
+      },
+      "location": "Localização",
+      "locationPlaceholder": "Cidade, Estado - País",
+      "submit": "Começar",
+      "sending": "Enviando...",
+      "success": "Obrigado! Entraremos em contato em breve.",
+      "error": "Algo deu errado. Por favor, tente novamente."
+    }
+  },
+  "about": {
+    "title": "Transforme a Folha de Pagamento em uma Solução Inteligente",
+    "description": "O Cartão Salário LiberPay é a solução inovadora que simplifica a gestão de pagamentos e traz mais liberdade financeira para seus colaboradores. Com um processo 100% digital, ágil e seguro, sua empresa ganha eficiência e seus funcionários têm acesso instantâneo ao salário, com múltiplas funcionalidades e benefícios exclusivos.",
+    "values": {
+      "title": "Nossos Valores",
+      "innovation": {
+        "title": "Inovação",
+        "description": "Soluções digitais de ponta"
+      },
+      "transparency": {
+        "title": "Transparência",
+        "description": "Processos claros e honestos"
+      },
+      "security": {
+        "title": "Segurança",
+        "description": "Proteção de nível bancário"
+      },
+      "accessibility": {
+        "title": "Acessibilidade",
+        "description": "Disponível para todos"
+      },
+      "efficiency": {
+        "title": "Eficiência",
+        "description": "Operações otimizadas"
+      },
+      "customerFocus": {
+        "title": "Foco no Cliente",
+        "description": "Seu sucesso é nossa prioridade"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Como Funciona",
+    "subtitle": "Pagamento de funcionários em apenas 3 passos simples",
+    "step1": {
+      "title": "Cadastro e Solicitação",
+      "description": "Sua empresa faz parceria com a <strong>LiberPay</strong>, e os colaboradores ou o RH podem se cadastrar pelo <strong>app</strong>, pelo <strong>portal do RH</strong> ou via <strong>planilha</strong>.\nO cartão virtual é gerado <strong>automaticamente</strong>, e o cartão físico pode ser solicitado, se necessário."
+    },
+    "step2": {
+      "title": "Gestão de Pagamento",
+      "description": "A folha de pagamento é enviada via <strong>API</strong> ou <strong>plataforma LiberPay</strong>.\nO valor total é transferido para uma <strong>conta escrow</strong> e distribuído <strong>instantaneamente</strong> para cada colaborador."
+    },
+    "step3": {
+      "title": "Depósito Instantâneo",
+      "description": "O salário é <strong>CREDITADO</strong> diretamente no cartão na data definida pelo empregador, e o colaborador recebe uma <strong>notificação no APP</strong> confirmando o pagamento."
+    }
+  }
+}
