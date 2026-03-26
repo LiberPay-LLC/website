@@ -10,16 +10,16 @@ from email.utils import formataddr
 from db import supabase
 from utils.email_utils import html_to_text
 
-SMTP_HOST = os.getenv('SMTP_HOST')
+SMTP_HOST = (os.getenv('SMTP_HOST') or '').strip() or None
 SMTP_PORT = int(os.getenv('SMTP_PORT', 465))
-SMTP_USER = os.getenv('SMTP_USER')
-SMTP_PASSWORD = os.getenv('SMTP_PASSWORD')
-SMTP_SECURITY = os.getenv('SMTP_SECURITY', 'auto').lower()
+SMTP_USER = (os.getenv('SMTP_USER') or '').strip() or None
+SMTP_PASSWORD = (os.getenv('SMTP_PASSWORD') or '').strip() or None
+SMTP_SECURITY = (os.getenv('SMTP_SECURITY', 'auto') or 'auto').strip().lower()
 SMTP_TIMEOUT = int(os.getenv('SMTP_TIMEOUT', 15))
-EMAIL_PROVIDER = os.getenv('EMAIL_PROVIDER', 'smtp').lower()
-RESEND_API_KEY = os.getenv('RESEND_API_KEY')
-EMAIL_FROM = os.getenv('EMAIL_FROM')
-TEAM_EMAIL = os.getenv('TEAM_EMAIL')
+EMAIL_PROVIDER = (os.getenv('EMAIL_PROVIDER', 'smtp') or 'smtp').strip().lower()
+RESEND_API_KEY = (os.getenv('RESEND_API_KEY') or '').strip() or None
+EMAIL_FROM = (os.getenv('EMAIL_FROM') or '').strip() or None
+TEAM_EMAIL = (os.getenv('TEAM_EMAIL') or '').strip() or None
 
 TEMPLATE_DIR = os.path.join(os.path.dirname(__file__), 'templates')
 env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
