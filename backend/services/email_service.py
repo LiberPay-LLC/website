@@ -1,6 +1,7 @@
 import os
 import smtplib
 import threading
+import hashlib
 from email.message import EmailMessage
 from jinja2 import Environment, FileSystemLoader
 import json
@@ -26,6 +27,28 @@ env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
 
 ASSETS_DIR = os.path.join(os.path.dirname(__file__), 'assets')
 LOGO_FILENAME = 'logo-full-name-no-background.png'
+
+
+def log_email_runtime_diagnostics():
+    key_len = len(RESEND_API_KEY) if RESEND_API_KEY else 0
+    key_prefix = RESEND_API_KEY[:8] if RESEND_API_KEY else "none"
+    key_sha12 = (
+        hashlib.sha256(RESEND_API_KEY.encode()).hexdigest()[:12]
+        if RESEND_API_KEY
+        else "none"
+    )
+    print(
+        "[EMAIL CONFIG] "
+        f"provider={EMAIL_PROVIDER} "
+        f"from={EMAIL_FROM} "
+        f"team_email={TEAM_EMAIL} "
+        f"resend_key_len={key_len} "
+        f"resend_key_prefix={key_prefix} "
+        f"resend_key_sha12={key_sha12}"
+    )
+
+
+log_email_runtime_diagnostics()
 
 
 def log_email(customer_id, to_email, subject, template, context, status, error_message, email_type):
