@@ -162,6 +162,7 @@ def send_email(subject, html_body, to_email):
                 headers={
                     "Authorization": f"Bearer {RESEND_API_KEY}",
                     "Content-Type": "application/json",
+                    "User-Agent": "liberpay-backend/1.0",
                 },
                 method="POST",
             )
