@@ -23,4 +23,4 @@ COPY . .
 EXPOSE 5000
 
 # Run the application
-CMD ["sh", "-c", "if [ \"$FLASK_ENV\" = \"development\" ]; then python app.py; else gunicorn --bind 0.0.0.0:5000 --workers 1 app:app; fi"] 
+CMD ["sh", "-c", "if [ \"$FLASK_ENV\" = \"development\" ]; then python app.py; else gunicorn --bind 0.0.0.0:${PORT:-5000} --workers 1 app:app; fi"]

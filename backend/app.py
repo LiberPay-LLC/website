@@ -29,12 +29,16 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 # Initialize extensions
 api = Api(app)
 
+# Configure CORS origins
+cors_origins_env = os.environ.get("CORS_ORIGINS", "http://localhost:10005")
+cors_origins = [
+    origin.strip() for origin in cors_origins_env.split(",") if origin.strip()
+]
+
 # Configure CORS
 CORS(
     app,
-    origins=[
-        "http://localhost:10005",
-    ],
+    origins=cors_origins,
     supports_credentials=True,
 )
 

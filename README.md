@@ -252,6 +252,37 @@ Para o formulário funcionar em produção:
    - `VITE_API_BASE_URL=https://SEU_BACKEND_PUBLICO/api`
 3. Rode o workflow novamente para gerar o build com a URL correta da API.
 
+## 🚀 Deploy do Backend no Render
+
+Este repositório já inclui `render.yaml` para facilitar o deploy do backend.
+
+### Passo a passo
+
+1. No Render, clique em **New +** → **Blueprint**.
+2. Conecte o repositório `LiberPay-LLC/website`.
+3. O Render vai detectar o arquivo `render.yaml` e criar o serviço `liberpay-backend`.
+4. Configure os env vars sensíveis no painel do Render:
+   - `SUPABASE_URL`
+   - `SUPABASE_KEY`
+   - `SMTP_HOST`
+   - `SMTP_USER`
+   - `SMTP_PASSWORD`
+   - `EMAIL_FROM`
+   - `TEAM_EMAIL`
+5. Em `CORS_ORIGINS`, use seu domínio do frontend, por exemplo:
+   - `https://liberpay-llc.github.io`
+6. Faça deploy e valide:
+   - `https://SEU_BACKEND.onrender.com/api/`
+
+### Conectar frontend (GitHub Pages) ao backend Render
+
+Depois de ter a URL pública do Render:
+
+1. No GitHub, abra `LiberPay-LLC/website` → **Settings → Secrets and variables → Actions → Variables**.
+2. Defina:
+   - `VITE_API_BASE_URL=https://SEU_BACKEND.onrender.com/api`
+3. Rode novamente o workflow de Pages para rebuild do frontend.
+
 ## 🔒 Security
 
 - JWT-based authentication
