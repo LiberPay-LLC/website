@@ -111,7 +111,7 @@ export const Header: React.FC = () => {
                 aria-label="Go to top"
               >
                 <img
-                  src="/logo-full-name-no-background.png"
+                  src={`${import.meta.env.BASE_URL}logo-full-name-no-background.png`}
                   alt="LiberPay"
                   className="h-6 w-auto"
                 />

@@ -90,7 +90,7 @@ export const Footer: React.FC = () => {
               <div className="mb-8">
                 <div className="flex items-center gap-3 mb-6">
                   <img
-                    src="/logo-full-name-no-background.png"
+                    src={`${import.meta.env.BASE_URL}logo-full-name-no-background.png`}
                     alt="LiberPay"
                     className="h-8 w-auto brightness-0 invert"
                   />

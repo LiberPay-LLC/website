@@ -39,7 +39,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({
         {/* Logo and Icon */}
         <div className="mb-8">
           <img
-            src="/logo-no-background.png"
+            src={`${import.meta.env.BASE_URL}logo-no-background.png`}
             alt="LiberPay"
             className="h-10 w-auto mx-auto mb-4"
           />

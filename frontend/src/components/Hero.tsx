@@ -145,7 +145,7 @@ export const Hero: React.FC = () => {
               <div className="relative max-w-48 lg:max-w-64 mx-auto">
                 <div className="transform rotate-2 lg:rotate-3 hover:rotate-0 transition-transform duration-300">
                   <img
-                    src="/card-mockup.png"
+                    src={`${import.meta.env.BASE_URL}card-mockup.png`}
                     alt="LiberPay Salary Card"
                     className="w-full h-auto rounded-2xl lg:rounded-3xl shadow-xl lg:shadow-2xl"
                   />
