@@ -143,10 +143,14 @@ def send_email(subject, html_body, to_email):
                 method="POST",
             )
             print("Sending email via Resend API...")
-            with urllib.request.urlopen(req, timeout=SMTP_TIMEOUT) as response:
-                if response.status < 200 or response.status >= 300:
-                    body = response.read().decode("utf-8", errors="ignore")
-                    raise RuntimeError(f"Resend API failed with status {response.status}: {body}")
+            try:
+                with urllib.request.urlopen(req, timeout=SMTP_TIMEOUT) as response:
+                    if response.status < 200 or response.status >= 300:
+                        body = response.read().decode("utf-8", errors="ignore")
+                        raise RuntimeError(f"Resend API failed with status {response.status}: {body}")
+            except urllib.error.HTTPError as error:
+                body = error.read().decode("utf-8", errors="ignore") if error.fp else ""
+                raise RuntimeError(f"Resend API HTTP {error.code}: {body}")
 
         if EMAIL_PROVIDER == 'resend':
             send_via_resend()
