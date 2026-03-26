@@ -14,7 +14,7 @@ const API_BASE_URL = (() => {
 
 const api: AxiosInstance = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 10000,
+  timeout: 30000,
   headers: {
     "Content-Type": "application/json",
   },
@@ -57,8 +57,23 @@ export const contactAPI = {
   submitContactForm: async (
     data: ContactFormData
   ): Promise<ContactResponse> => {
+    const postContact = () => api.post("/contacts", data);
+
     try {
-      const response = await api.post("/contacts", data);
+      let response;
+      try {
+        response = await postContact();
+      } catch (firstError) {
+        if (
+          axios.isAxiosError(firstError) &&
+          (!firstError.response || firstError.code === "ECONNABORTED")
+        ) {
+          response = await postContact();
+        } else {
+          throw firstError;
+        }
+      }
+
       if (response.status === 201 && response.data) {
         return {
           success: true,
@@ -71,9 +86,14 @@ export const contactAPI = {
       };
     } catch (error) {
       if (axios.isAxiosError(error)) {
+        const timeoutMessage =
+          error.code === "ECONNABORTED"
+            ? "Request timeout. The backend may be waking up. Please try again in a few seconds."
+            : null;
         return {
           success: false,
           message:
+            timeoutMessage ||
             (error.response?.data && error.response.data.message) ||
             "Network error occurred. Please try again.",
         };
