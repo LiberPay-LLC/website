@@ -9,10 +9,25 @@ import { ContactForm } from "./components/ContactForm";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { useEffect, useState } from "react";
 import { BibleVerse } from "./components/BibleVerse";
+import { PrivacyPolicy } from "./components/PrivacyPolicy";
+
+const getRelativePath = (pathname: string) => {
+  const base = import.meta.env.BASE_URL || "/";
+  const normalizedBase = base.endsWith("/") ? base.slice(0, -1) : base;
+
+  if (normalizedBase && normalizedBase !== "/" && pathname.startsWith(normalizedBase)) {
+    const strippedPath = pathname.slice(normalizedBase.length);
+    return strippedPath.startsWith("/") ? strippedPath : `/${strippedPath}`;
+  }
+
+  return pathname;
+};
 
 function App() {
   const { t, ready, i18n } = useTranslation();
   const [isLoading, setIsLoading] = useState(true);
+  const path = getRelativePath(window.location.pathname).replace(/\/+$/, "") || "/";
+  const isPrivacyPage = path === "/privacy-policy";
 
   // Initialize language from URL on app start
   useEffect(() => {
@@ -44,9 +59,15 @@ function App() {
 
   useEffect(() => {
     if (ready) {
-      document.title = t("pageTitle");
+      document.title = isPrivacyPage
+        ? t("privacyPolicy.pageTitle")
+        : t("pageTitle");
     }
-  }, [ready, t]);
+  }, [ready, t, isPrivacyPage]);
+
+  if (isPrivacyPage) {
+    return <PrivacyPolicy />;
+  }
 
   return (
     <div className="min-h-screen bg-white">

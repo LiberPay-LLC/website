@@ -221,5 +221,192 @@
       "title": "Depósito Instantâneo",
       "description": "O salário é <strong>CREDITADO</strong> diretamente no cartão na data definida pelo empregador, e o colaborador recebe uma <strong>notificação no APP</strong> confirmando o pagamento."
     }
+  },
+  "privacyPolicy": {
+    "pageTitle": "Política de Privacidade - LiberPay LLC",
+    "title": "Política de Privacidade - LiberPay LLC",
+    "effectiveDateLabel": "Data de Vigência",
+    "effectiveDateValue": "9 de abril de 2026",
+    "backHome": "Voltar para a página inicial",
+    "sections": [
+      {
+        "title": "1. Introdução",
+        "paragraphs": [
+          "A LiberPay LLC (\"nós\", \"nosso\" ou \"LiberPay\") fornece uma plataforma privada para gestão de pagamentos de funcionários e emissão de cartões para empresas e seus colaboradores.",
+          "Esta Política de Privacidade explica como coletamos, usamos, compartilhamos e protegemos informações pessoais quando indivíduos (\"Usuários\") utilizam nossos serviços."
+        ]
+      },
+      {
+        "title": "2. Escopo",
+        "paragraphs": [
+          "Esta Política se aplica a:"
+        ],
+        "bullets": [
+          "Funcionários e prestadores que recebem pagamentos através da LiberPay",
+          "Representantes das empresas (\"Clientes\") que utilizam a LiberPay",
+          "Usuários de nosso site, aplicações e APIs"
+        ]
+      },
+      {
+        "title": "3. Informações que Coletamos",
+        "paragraphs": [
+          "Podemos coletar as seguintes categorias de dados pessoais:"
+        ],
+        "subsections": [
+          {
+            "title": "a) Dados de Identificação",
+            "bullets": [
+              "Nome completo",
+              "Data de nascimento",
+              "Documento de identificação oficial",
+              "Endereço",
+              "E-mail e telefone"
+            ]
+          },
+          {
+            "title": "b) Dados Financeiros",
+            "bullets": [
+              "Dados bancários",
+              "Informações de transações",
+              "Dados de cartões emitidos por parceiros"
+            ]
+          },
+          {
+            "title": "c) Dados Profissionais",
+            "bullets": [
+              "Nome do empregador",
+              "Registros de pagamento",
+              "Informações relacionadas à remuneração"
+            ]
+          },
+          {
+            "title": "d) Dados de Uso e Dispositivo",
+            "bullets": [
+              "Endereço IP",
+              "Tipo de dispositivo",
+              "Navegador",
+              "Dados de uso da plataforma"
+            ]
+          },
+          {
+            "title": "e) Dados Pessoais Sensíveis",
+            "bullets": [
+              "Quando necessário, dados para verificação de identidade (ex.: documentos ou verificação biométrica)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "4. Como Utilizamos as Informações",
+        "paragraphs": [
+          "Utilizamos os dados pessoais para:",
+          "Não utilizamos dados pessoais para finalidades não relacionadas sem aviso prévio."
+        ],
+        "bullets": [
+          "Operar e fornecer nossos serviços de pagamento e cartões",
+          "Processar pagamentos de funcionários",
+          "Verificar identidade e prevenir fraudes",
+          "Cumprir obrigações legais e regulatórias",
+          "Enviar comunicações relacionadas ao serviço",
+          "Melhorar e manter nossa plataforma"
+        ]
+      },
+      {
+        "title": "5. Base Legal para Tratamento",
+        "paragraphs": [
+          "Dependendo do contexto, tratamos os dados com base em:"
+        ],
+        "bullets": [
+          "Execução de contrato (ex.: processamento de pagamentos)",
+          "Cumprimento de obrigações legais",
+          "Interesses legítimos do negócio",
+          "Consentimento do usuário, quando aplicável"
+        ]
+      },
+      {
+        "title": "6. Compartilhamento de Informações",
+        "paragraphs": [
+          "Podemos compartilhar dados pessoais com:",
+          "Não vendemos dados pessoais."
+        ],
+        "bullets": [
+          "Instituições financeiras e emissores de cartão",
+          "Prestadores de serviço (ex.: verificação de identidade, antifraude)",
+          "Empresas Clientes (quando necessário para a folha de pagamento)",
+          "Autoridades regulatórias ou legais, quando exigido"
+        ]
+      },
+      {
+        "title": "7. Direitos de Privacidade (Califórnia - CCPA/CPRA)",
+        "paragraphs": [
+          "Se você for residente da Califórnia, você tem o direito de:"
+        ],
+        "bullets": [
+          "Solicitar acesso aos seus dados pessoais",
+          "Solicitar exclusão (com exceções legais)",
+          "Solicitar correção de dados incorretos",
+          "Limitar o uso de dados sensíveis",
+          "Optar por não permitir venda ou compartilhamento de dados (nota: não vendemos dados)",
+          "Para exercer seus direitos, entre em contato:"
+        ],
+        "contactEmail": "contact@liberpay.co"
+      },
+      {
+        "title": "8. Retenção de Dados",
+        "paragraphs": [
+          "Mantemos os dados pessoais apenas pelo tempo necessário para:",
+          "Os períodos de retenção podem variar conforme exigências regulatórias."
+        ],
+        "bullets": [
+          "Fornecer nossos serviços",
+          "Cumprir obrigações legais",
+          "Resolver disputas e fazer cumprir contratos"
+        ]
+      },
+      {
+        "title": "9. Segurança da Informação",
+        "paragraphs": [
+          "Adotamos medidas técnicas e organizacionais razoáveis para proteger os dados, incluindo:",
+          "No entanto, nenhum sistema é totalmente seguro."
+        ],
+        "bullets": [
+          "Criptografia em trânsito e em repouso",
+          "Controle de acesso",
+          "Monitoramento e sistemas antifraude"
+        ]
+      },
+      {
+        "title": "10. Transferência Internacional de Dados",
+        "paragraphs": [
+          "As informações podem ser processadas e armazenadas nos Estados Unidos e em outros países onde nossos parceiros operam."
+        ]
+      },
+      {
+        "title": "11. Privacidade de Crianças",
+        "paragraphs": [
+          "Nossos serviços não são destinados a menores de 13 anos. Não coletamos intencionalmente dados de crianças."
+        ]
+      },
+      {
+        "title": "12. Alterações nesta Política",
+        "paragraphs": [
+          "Podemos atualizar esta Política periodicamente. A versão mais recente estará sempre disponível com a data de vigência atualizada."
+        ]
+      },
+      {
+        "title": "13. Contato",
+        "paragraphs": [
+          "Para dúvidas ou solicitações relacionadas a esta Política:"
+        ],
+        "contactDetails": {
+          "emailLabel": "Email",
+          "companyLabel": "Empresa",
+          "locationLabel": "Localização",
+          "email": "contact@liberpay.co",
+          "company": "LiberPay LLC",
+          "location": "San Diego, California, United States"
+        }
+      }
+    ]
   }
 }

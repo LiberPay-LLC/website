@@ -13,7 +13,19 @@ import {
 import { scrollToSection } from "../utils/scroll";
 
 export const Footer: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const buildInternalUrl = (path: string) => {
+    const base = import.meta.env.BASE_URL || "/";
+    const normalizedBase = base.endsWith("/") ? base : `${base}/`;
+    const normalizedPath = path.startsWith("/") ? path.slice(1) : path;
+    const url = new URL(
+      `${normalizedBase}${normalizedPath}`,
+      window.location.origin
+    );
+    url.searchParams.set("lang", i18n.language);
+    return `${url.pathname}${url.search}`;
+  };
 
   const footerSections = [
     {
@@ -41,20 +53,15 @@ export const Footer: React.FC = () => {
         },
       ],
     },
-    // {
-    //   title: t("footer.product"),
-    //   links: [
-    //     { key: "help", href: "#help", external: false },
-    //   ],
-    // },
-    // {
-    //   title: t("footer.legal"),
-    //   links: [
-    //     { key: "privacy", href: "#privacy", external: false },
-    //     { key: "terms", href: "#terms", external: false },
-    //     { key: "cookies", href: "#cookies", external: false },
-    //   ],
-    // },
+    {
+      title: t("footer.legal"),
+      links: [
+        {
+          key: "privacy",
+          href: buildInternalUrl("/privacy-policy"),
+        },
+      ],
+    },
   ];
 
   const socialLinks = [
