@@ -23,7 +23,34 @@ const getRelativePath = (pathname: string) => {
   return pathname;
 };
 
+const applySpaRedirectFrom404 = () => {
+  const currentUrl = new URL(window.location.href);
+  const redirectParam = currentUrl.searchParams.get("redirect");
+
+  if (!redirectParam) {
+    return;
+  }
+
+  try {
+    const decodedTarget = decodeURIComponent(redirectParam);
+    if (!decodedTarget.startsWith("/")) {
+      return;
+    }
+
+    const targetUrl = new URL(decodedTarget, window.location.origin);
+    window.history.replaceState(
+      {},
+      "",
+      `${targetUrl.pathname}${targetUrl.search}${targetUrl.hash}`
+    );
+  } catch {
+    // Ignore malformed redirect parameter and continue with current URL.
+  }
+};
+
 function App() {
+  applySpaRedirectFrom404();
+
   const { t, ready, i18n } = useTranslation();
   const [isLoading, setIsLoading] = useState(true);
   const path = getRelativePath(window.location.pathname).replace(/\/+$/, "") || "/";

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      (function () {
+        var pathname = window.location.pathname;
+
+        // Keep normal 404 behavior for missing static files.
+        if (/\.[a-zA-Z0-9]+$/.test(pathname)) {
+          return;
+        }
+
+        var basePath = pathname.startsWith("/website/") ? "/website/" : "/";
+        var redirectTarget = pathname + window.location.search + window.location.hash;
+        var redirectUrl =
+          basePath + "?redirect=" + encodeURIComponent(redirectTarget);
+
+        window.location.replace(redirectUrl);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
