@@ -40,6 +40,11 @@ jobs:
           VITE_API_BASE_URL: ${{ vars.VITE_API_BASE_URL || '/api' }}
           VITE_BASE_PATH: ${{ vars.VITE_BASE_PATH || '/' }}
 
+      - name: Create SPA fallbacks for deep routes
+        run: |
+          mkdir -p dist/privacy-policy
+          cp dist/index.html dist/privacy-policy/index.html
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
