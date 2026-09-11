@@ -191,6 +191,12 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
+        <div className="border-t border-gray-800 py-6 sm:py-8">
+          <p className="mx-auto max-w-5xl text-center text-xs leading-6 text-gray-400 sm:text-sm">
+            {t("footer.legalNotice")}
+          </p>
+        </div>
+
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 py-8">
           <div className="text-center">

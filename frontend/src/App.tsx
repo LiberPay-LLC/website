@@ -93,7 +93,12 @@ function App() {
   }, [ready, t, isPrivacyPage]);
 
   if (isPrivacyPage) {
-    return <PrivacyPolicy />;
+    return (
+      <>
+        <PrivacyPolicy />
+        <Footer />
+      </>
+    );
   }
 
   return (
