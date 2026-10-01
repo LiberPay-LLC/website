@@ -1,4 +1,28 @@
 {
+  "partners": {
+    "eyebrow": "LiberPay para parceiros",
+    "title": "Suas conexões são uma nova fonte de receita.",
+    "subtitle": "Apresente às empresas que você assessora uma forma mais simples de pagar suas equipes. Indique a LiberPay e descubra o potencial de ganhos das suas conexões.",
+    "audience": { "hr": "Profissionais de RH", "accountants": "Contadores e escritórios contábeis", "advisors": "Consultores empresariais" },
+    "calculatorTitle": "Veja quanto suas indicações podem gerar",
+    "calculatorIntro": "Comece com uma empresa ou some as equipes de várias indicações. A estimativa é atualizada enquanto você digita.",
+    "employees": "Número de colaboradores",
+    "salary": "Salário bruto médio mensal (USD)",
+    "salaryHint": "Todos os valores são em dólares americanos, por colaborador.",
+    "employeesError": "Informe um número inteiro de 0 a 10.000.000.",
+    "salaryError": "Informe um salário de 0 a 100.000.000 USD.",
+    "networkHint": "Pense nas empresas que já confiam na sua orientação. Sua próxima indicação pode ser o início de uma parceria de valor.",
+    "monthlyCommission": "Comissão mensal estimada do parceiro",
+    "commissionHint": "Com base em {{rate}} da receita líquida simulada.",
+    "annualCommission": "Estimativa anual · 12 meses",
+    "breakdown": "Ver cálculo e premissas",
+    "rows": { "payroll": "Folha de pagamento mensal", "gross": "Receita bruta", "taxes": "Impostos estimados", "federal": "Federal", "state": "Califórnia", "net": "Receita líquida", "commission": "Comissão do parceiro" },
+    "assumptions": "O modelo considera {{gross}} da folha como receita bruta, deduz {{federal}} de imposto federal e {{state}} da Califórnia sobre essa receita e aplica {{commission}} de comissão ao valor restante.",
+    "disclaimer": "Valores ilustrativos, sem garantia de ganhos. Não constituem orientação financeira ou tributária. A estimativa anual considera 12 meses iguais. As comissões efetivas dependem dos termos da parceria e da atividade das empresas.",
+    "ctaTitle": "Já tem uma empresa em mente?",
+    "ctaText": "Vamos conversar sobre sua rede de contatos e as possibilidades de parceria.",
+    "cta": "Quero ser parceiro"
+  },
   "pageTitle": "LiberPay - Simplifique os Pagamentos de Funcionários com Cartões de Crédito",
   "nav": {
     "howItWorks": "Como Funciona",

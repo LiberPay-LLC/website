@@ -1,4 +1,28 @@
 {
+  "partners": {
+    "eyebrow": "LiberPay for partners",
+    "title": "Your connections is new source of revenue.",
+    "subtitle": "Help the businesses you advise discover a simpler way to pay their teams. Introduce them to LiberPay and explore your potential to earn through company referrals.",
+    "audience": { "hr": "HR professionals", "accountants": "Accountants & bookkeepers", "advisors": "Business advisors" },
+    "calculatorTitle": "See what your referrals could earn",
+    "calculatorIntro": "Start with one company or the combined team size of several referrals. Your estimate updates as you type.",
+    "employees": "Number of employees",
+    "salary": "Average monthly gross salary (USD)",
+    "salaryHint": "All amounts are in US dollars, per employee.",
+    "employeesError": "Enter a whole number from 0 to 10,000,000.",
+    "salaryError": "Enter a salary from 0 to 100,000,000 USD.",
+    "networkHint": "Think about the companies that already trust your advice. Your next introduction could be the start of a valuable partnership.",
+    "monthlyCommission": "Estimated monthly partner commission",
+    "commissionHint": "Based on {{rate}} of simulated net revenue.",
+    "annualCommission": "Annual estimate · 12 months",
+    "breakdown": "See the calculation & assumptions",
+    "rows": { "payroll": "Total monthly payroll", "gross": "Gross revenue", "taxes": "Estimated taxes", "federal": "Federal", "state": "California", "net": "Net revenue", "commission": "Partner commission" },
+    "assumptions": "This model uses {{gross}} of payroll as gross revenue, deducts {{federal}} federal and {{state}} California tax from that revenue, then applies a {{commission}} partner commission to the remainder.",
+    "disclaimer": "Illustrative estimates, not guaranteed earnings or financial or tax advice. The annual estimate assumes 12 identical months. Actual commissions depend on the agreed partnership terms and company activity.",
+    "ctaTitle": "Have a company in mind?",
+    "ctaText": "Let’s talk about your network and the partnership possibilities.",
+    "cta": "Become a partner"
+  },
   "pageTitle": "LiberPay - Simplify Employee Payments with Credit Cards",
   "nav": {
     "howItWorks": "How It Works",

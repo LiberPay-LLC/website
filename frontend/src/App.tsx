@@ -6,6 +6,7 @@ import { Footer } from "./components/Footer";
 import { AboutUs } from "./components/AboutUs";
 import { HowItWorks } from "./components/HowItWorks";
 import { ContactForm } from "./components/ContactForm";
+import { PartnerCalculator } from "./components/PartnerCalculator";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { useEffect, useState } from "react";
 import { BibleVerse } from "./components/BibleVerse";
@@ -115,6 +116,7 @@ function App() {
         <HowItWorks />
         <Benefits />
         <AboutUs />
+        <PartnerCalculator />
         <ContactForm />
         <BibleVerse />
         <Footer />
