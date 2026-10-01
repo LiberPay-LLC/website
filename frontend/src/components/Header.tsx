@@ -4,16 +4,17 @@ import { Menu, X, ChevronRight } from "lucide-react";
 import { LanguageToggle } from "./LanguageToggle";
 import { scrollToSection, scrollToTop } from "../utils/scroll";
 
+const navItems = [
+  { key: "howItWorks", href: "#how-it-works" },
+  { key: "benefits", href: "#benefits" },
+  { key: "about", href: "#about" },
+  { key: "partners", href: "#partners" },
+];
+
 export const Header: React.FC = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-
-  const navItems = [
-    { key: "howItWorks", href: "#how-it-works" },
-    { key: "benefits", href: "#benefits" },
-    { key: "about", href: "#about" },
-  ];
 
   // Track active section based on scroll position
   useEffect(() => {
@@ -120,7 +121,7 @@ export const Header: React.FC = () => {
 
             {/* Desktop Navigation */}
             <nav
-              className="hidden md:flex items-center gap-8"
+              className="hidden lg:flex items-center gap-4 xl:gap-8"
               role="navigation"
               aria-label="Main navigation"
             >
@@ -129,9 +130,10 @@ export const Header: React.FC = () => {
                 const isActive = activeSection === sectionId;
 
                 return (
-                  <button
+                  <a
                     key={item.key}
-                    onClick={() => handleNavClick(item.href)}
+                    href={item.href}
+                    onClick={(event) => { event.preventDefault(); handleNavClick(item.href); }}
                     className={`relative text-sm font-medium font-open-sans transition-all duration-200 px-3 py-2 rounded-lg group ${
                       isActive
                         ? "text-blue-600 bg-blue-50"
@@ -146,13 +148,13 @@ export const Header: React.FC = () => {
                     )}
                     {/* Hover effect */}
                     <div className="absolute inset-0 bg-blue-50 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 -z-10" />
-                  </button>
+                  </a>
                 );
               })}
             </nav>
 
             {/* Desktop Actions */}
-            <div className="hidden md:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-4">
               <LanguageToggle />
               <button
                 onClick={handleGetStarted}
@@ -163,7 +165,7 @@ export const Header: React.FC = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="md:hidden flex items-center gap-3">
+            <div className="lg:hidden flex items-center gap-3">
               <LanguageToggle />
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -184,7 +186,7 @@ export const Header: React.FC = () => {
 
       {/* Mobile Navigation Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm z-40">
+        <div className="lg:hidden fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm z-40">
           <div className="absolute top-16 left-0 right-0 bg-white shadow-xl border-b border-gray-100 mobile-menu-content animate-in slide-in-from-top-2 duration-300">
             <div className="px-4 py-6">
               <nav
@@ -197,9 +199,10 @@ export const Header: React.FC = () => {
                   const isActive = activeSection === sectionId;
 
                   return (
-                    <button
+                    <a
                       key={item.key}
-                      onClick={() => handleNavClick(item.href)}
+                      href={item.href}
+                      onClick={(event) => { event.preventDefault(); handleNavClick(item.href); }}
                       className={`w-full flex items-center justify-between p-4 text-left text-lg font-medium rounded-lg transition-all duration-200 group ${
                         isActive
                           ? "bg-blue-50 text-blue-600 border-l-4 border-blue-600"
@@ -216,7 +219,7 @@ export const Header: React.FC = () => {
                             : "text-gray-400 group-hover:text-blue-600"
                         }`}
                       />
-                    </button>
+                    </a>
                   );
                 })}
 
